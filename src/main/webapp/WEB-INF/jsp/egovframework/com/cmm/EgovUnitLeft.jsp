@@ -15,7 +15,7 @@ link:hover { color: #000000; text-decoration: none; }
 <body>
 <div id="lnb">
 	<ul class="lnb_title">
-		<a href="/BoardList.do?bbsId=BBSID_0000001" target="_content"> 자유게시판</a>
+		<a href="/BbList.do" target="_content"> 자유게시판</a>
 	</ul>
 	
 	

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BbsWriteDAO">
+
+	
+ 	<resultMap id="BoardList" type="egovframework.wini.edu.bbs.service.Tcom_bbs">
+		<result property="bbsSeq" column="BBS_SEQ"/>
+		<result property="title" column="TITLE"/>
+		<result property="name" column="NAME"/>
+		<result property="content" column="CONTENT"/>
+		<result property="passwd" column="PASSWD"/>
+		<result property="openYn" column="OPEN_YN"/>
+		<result property="noticeYn" column="NOTICE_YN"/>
+		<result property="regDt" column="REG_DT"/>
+		<result property="modDt" column="MOD_DT"/>
+	</resultMap> 
+	
+	<insert id="write" parameterType="egovframework.wini.edu.bbs.service.Tcom_bbs">
+		INSERT INTO TCOM_BBS
+				(BBS_SEQ,TITLE,NAME,CONTENT,PASSWD,OPEN_YN,NOTICE_YN,REG_DT,MOD_DT)
+	    VALUES (7,#{title},#{name},#{content},#{passwd},'N','N',SYSDATE,'')
+	</insert> 
+ 
+<!-- 	<insert id="write" parameterType="egovframework.wini.edu.bbs.service.Tcom_bbs">
+		INSERT INTO TCOM_BBS
+				(BBS_SEQ,TITLE,NAME,CONTENT,PASSWD,OPEN_YN,NOTICE_YN,REG_DT,MOD_DT)
+	    VALUES (4,#{title},#{name},#{content},#{passwd},#{openYn},#{noticeYn},SYSDATE(),'')
+	</insert> 
+	
+	
+		<insert id="write" parameterType="egovframework.wini.edu.bbs.service.Tcom_bbs">
+		INSERT INTO TCOM_BBS
+				(BBS_SEQ,TITLE,NAME,CONTENT,PASSWD,OPEN_YN,NOTICE_YN,REG_DT,MOD_DT)
+	    VALUES (6,'게시글5','작성자5','하이','1234','N','N',SYSDATE,'')
+	</insert> 
+	
+	-->
+ 	
+</mapper>

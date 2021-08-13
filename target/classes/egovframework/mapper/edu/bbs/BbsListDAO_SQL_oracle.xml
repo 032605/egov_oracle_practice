@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BbsListDAO">
+
+	
+ 	<resultMap id="BoardList" type="egovframework.wini.edu.bbs.service.Tcom_bbs">
+		<result property="bbsSeq" column="BBS_SEQ"/>
+		<result property="title" column="TITLE"/>
+		<result property="name" column="NAME"/>
+		<result property="content" column="CONTENT"/>
+		<result property="passwd" column="PASSWD"/>
+		<result property="openYn" column="OPEN_YN"/>
+		<result property="noticeYn" column="NOTICE_YN"/>
+		<result property="regDt" column="REG_DT"/>
+		<result property="modDt" column="MOD_DT"/>
+	</resultMap> 
+	
+	<select id="SelectBoardList" parameterType="egovframework.wini.edu.bbs.service.Tcom_bbs" resultMap="BoardList">
+		
+		SELECT BBS_SEQ,TITLE,NAME,REG_DT	    
+		FROM TCOM_BBS
+
+	</select>
+
+ 	
+</mapper>
